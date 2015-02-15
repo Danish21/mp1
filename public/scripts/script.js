@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var headerHeight = $(window).height()-70;
 	var headerWidth  = $(window).width();
 	$("#dynamicText").css('top', ""+ (headerHeight/2)-100+"px" );
-	$("#dynamicText").css('left', ""+ (headerWidth/2)-160+"px" );
+	$("#dynamicText").css('left', ""+ (headerWidth/2)-180+"px" );
 	$("#searchBox").css('top', ""+ (headerHeight/2)-50+"px" );
 	$("#searchBox").css('left', ""+ (headerWidth/2)-150+"px" );
 	//$("#playButton").css('left', ""+ (headerWidth/2)-75+"px" );
@@ -83,10 +83,9 @@ $(document).ready(function(){
 		headerWidth  = $(window).width();
 		$('header').css("height",""+ headerHeight + "px"  );
 		$("#dynamicText").css('top', ""+ (headerHeight/2)-100+"px" );
-		$("#dynamicText").css('left', ""+ (headerWidth/2)-1800+"px" );
+		$("#dynamicText").css('left', ""+ (headerWidth/2)-180+"px" );
 		$("#searchBox").css('top', ""+ (headerHeight/2)-50+"px" );
 		$("#searchBox").css('left', ""+ (headerWidth/2)-150+"px" );
-		$('.slide').css('width', ""+headerWidth+"px");
 		updateSlideShowWidth();
 		//$("#playButton").css('left', ""+ (headerWidth/2)-75+"px" );
 	});
@@ -226,15 +225,13 @@ $(document).ready(function(){
          	ahref = "#Mission";
         }
         else if(i==1){
-         	ahref = "#Businesses";
+         	ahref = "#theTeam";
         }
-        else if(i==2){
-         	ahref= "#theTeam";
+        else if(i==2 || i==3){
+         	ahref= "#subscriptionForm";
         }
-        else if(i==3){
-         	ahref = "#subscriptionForm";
-        }else if(i==4){
-        	ahref = "#footer";
+        else if(i==4){
+         	ahref = "#mainDiv";
         }
         aChildren[i]="#menu"+(i+1) +" a";
        	// console.log(aChildren[i]);
@@ -257,34 +254,21 @@ $(document).ready(function(){
             // console.log("windowPos: " + windowPos);
             // console.log("windowHeight: " + windowHeight);
             // console.log("id: "+aChildren[i]);
-            var j=0;
-            if(i==4){
-            	j=200;
-            }
-            // (divPos+divHeight) <= (windowPos + windowHeight+j)
-            if ( ( (windowPos +70) >= divPos) && ( (windowPos+70) <= (divPos+divHeight) ) ) {
+            if ( (windowPos <= divPos) && ( (divPos+divHeight) <= (windowPos + windowHeight) ) ) {
             	// console.log("shouldColor");
                 $(aChildren[i]).css('color', 'red');
                 $(aChildren[i]).css('text-decoration', 'underline');
             } else {
                 $(aChildren[i]).css('color', 'white');
                  $(aChildren[i]).css('text-decoration', 'none');
-            }  
-        }
-
-        if( (windowPos + windowHeight) > (docHeight-1) ){
-            	console.log("hit Bottom");
-            	$(aChildren[3]).css('color', 'white');
-                $(aChildren[3]).css('text-decoration', 'none');
-                 $(aChildren[4]).css('color', 'red');
-                $(aChildren[4]).css('text-decoration', 'underline');
+            }
         }
 
     });
 	/*Nav Bar Highlighting stuff done*/
 
 	/*slideshow*/
-	var currentPosition = 0; 
+	var currentPosition = 0;
 
 	
 	$('.slide').css('width', ""+headerWidth+"px");
@@ -295,35 +279,22 @@ $(document).ready(function(){
 	slides.css({ 'float' : 'left' });
 	$('#slidesHolder').css('width', headerWidth * numberOfSlides);
 
-	$('.fa-arrow-left').click(function(event){
-	    currentPosition--;
-	    if(currentPosition<0){
-	    	currentPosition=numberOfSlides-1;
-	    }
-	   moveSlide();
 
-	 });
-
-	$('.fa-arrow-right').click(function(event){
-	    currentPosition++;
-	    if(currentPosition==numberOfSlides){
-	    	currentPosition=0;
-	    }
-	    moveSlide();
-
-	 });
+	function changePosition() {
+			if(currentPosition == numberOfSlides - 1) {
+				currentPosition = 0;
+			} else {
+				currentPosition++;
+			}
+			moveSlide();
+	}
 	
 	function moveSlide() {
 				$('#slidesHolder')
 				  .animate({'marginLeft' : headerWidth*(-currentPosition)});
 	}
 
-	// var slideMover = setInterval(changePosition,5000);
-
-	
-
-	
-
+	var slideMover = setInterval(changePosition,2000);
 	/*slideshow*/
 	function updateSlideShowWidth(){
 		$('.slide').css('width', ""+headerWidth+"px");

@@ -4,13 +4,334 @@
   <meta charset="UTF-8">
   <title>MP1 Starter</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> 
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is Anthony.</div>
+ 		<nav id="#navBar"> 
+			<div id="logoWrapper" class="inNav"><img class ="mainLogo" src="images/mainLogo.png"></div>
+			
+			<div id= "navWrapper" class="inNav"> 
+				<ul class= "navOptions">
+					
+	  				<li class="menu" id="menu1"><a href="#missionAnchor">Mission</a></li>
+	  				<li class="menu" id="menu2"><a href="#businessAnchor">Businesses</a></li>
+	  				<li class="menu" id="menu3"><a href="#teamAnchor">Team</a></li>
+	  				<li class="menu" id="menu4"><a href="#subscribeAnchor">Sign Up</a></li>
+	  				<li class="menu" id="menu5"><a href="#footerAnchor">Contacts</a></li>
+	  			
+				</ul>
+			</div>
+
+		</nav>
+		
+		<header id="mainDiv">
+			
+			<h1 id="dynamicText"> </h1>
+
+			<form id="searchBox">
+				 <input type="text" size="50"placeholder="Restraunt Name, Zipcode, Cuisine">
+                  <input type="button" value="Search">
+
+			</form>
+
+		</header> 
+		<div id="missionAnchor"></div>
+		<section id="Mission">
+			
+			<h3 id="MissionTitle">Lets tell the world know exactly whats good and whats not!</h3>
+			<section id="collumnView"> 
+
+			<div class="collumn collumn1">
+				<h1 class="missionSubtitle"> Just open our app</h1>
+				<div class="imageWrapper" id="imageWrapper1">
+					<img src="images/iphoneScreen.png" width="100px" height="200px">
+					<img id ="iphoneLogo" src="images/mainLogo.png">
+					</div>
+			</div>
+			<div class="collumn collumn2">
+				<h1 class="missionSubtitle"> We'll open the menu </h1>
+				<div class="imageWrapper" id="imageWrapper2">
+					<img src="images/iphoneTracked.png" width="200px" height="200px">
+				</div>
+			</div>
+			<div class="collumn collumn3">
+				<h1 class="missionSubtitle">  Tell us how it is</h1>
+				<div class="imageWrapper" id="imageWrapper3">
+					<img src="images/iphoneScreen.png" width="100px" height="200px">
+					<h3> BBQ Chicken Pizza</h3>
+					<h4 id="dynamicReview"> </h2>
+				</div>
+			</div>
+
+			</section>
+
+		</section>
+
+		<div id="businessAnchor"></div>
+		<section id="Businesses">
+			<h1 id="bHeading">Own a food business?</h1>
+			<h3 id="bSubHeading">Custom enter your Menu to get instant feedback on what to keep and what to replace</h1>
+			<div id="carasol">
+				<div class="slide" id="slide1">
+					<div class="leftArrowBox">
+						<i class="fa fa-arrow-left"></i>
+					</div>
+
+					<div class="rightArrowBox">
+						<i class="fa fa-arrow-right"></i>
+					</div>
+
+				</div>
+
+				<div class="slide" id="slide2">
+					<div class="leftArrowBox">
+						<i class="fa fa-arrow-left"></i>
+					</div>
+
+					<div class="rightArrowBox">
+						<i class="fa fa-arrow-right"></i>
+					</div>
+
+				</div>
+
+				<div class="slide" id="slide3">
+					
+					<div class="leftArrowBox">
+						<i class="fa fa-arrow-left"></i>
+					</div>
+
+					<div class="rightArrowBox">
+						<i class="fa fa-arrow-right"></i>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
 
 
+		<div id="teamAnchor"></div>
+		<section id="theTeam">
+			<h3 id="teamTitle">Small Company with Big Dreams</h3>
+			<h4 id="teamSubTitle">Like many startups, wikiMenus started with a convesation in a dorm room. We hope one day that it emcompasses restraunts and menus from the entire world. Hopefully it informs the world and its restraunts on exactly whats good and whats Not!</h4>
+			<div class="teamCollumn" id="teamCollum1">
+				<div class="employee"	id="employee1">
+					<h1 class="employeeName">Danish Noorani</h1>
+					<div class="employeePictureWrapper" id="employeePicture1">
+						<img class= "employeePicture" id="employeePicture1" src="images/headshot1.jpg"> 
+					</div>
+				</div>
+				<div class="employee"	id="employee2">
+					<h1 class="employeeName">Angela Ding</h1>
+					<div class="employeePictureWrapper" id="employeePicture2">
+						<img class= "employeePicture" id="employeePicture1" src="images/headshot2.jpg">  
+					</div>
+				</div>
+			</div>
+			<div class="teamCollumn" id= "teamCollum2">
+				<div class="employee"	id="employee3">
+					<h1 class="employeeName">Khurram Ghullamani</h1>
+					<div class="employeePictureWrapper" id="employeePicture3"> 
+						<img class= "employeePicture" id="employeePicture1" src="images/headShot3.jpg"> 
+					</div>
+				</div>
+				<div class="employee"	id="employee4">
+					<h1 class="employeeName">Abril Xu</h1>
+					<div class="employeePictureWrapper" id="employeePicture4"> 
+						<img class= "employeePicture" id="employeePicture1" src="images/headShot4.jpg"> 
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="modalEmployee" id="modalEmployee1">
+			
+			<div class="exitModal" id="exitModal1">X</div>
+			<div class="descriptionWrapper" id="descriptionWrapper1">
+				<p>Danish is a student in Computer Science at the University of Illinois at Urbana Champaign.</p>
+			</div>
+
+		</section>
+
+		<section class="modalEmployee" id="modalEmployee2">
+			<div class="exitModal" id="exitModal2">X</div>
+			<div class="descriptionWrapper" id="descriptionWrapper2">
+				<p>Danish is a student in Computer Science at the University of Illinois at Urbana Champaign.</p>
+			</div>
+
+		</section>
+
+		<section class="modalEmployee"id="modalEmployee3">
+			<div class="exitModal" id="exitModal3">X</div>
+			<div class="descriptionWrapper" id="descriptionWrapper3">
+				<p>Danish is a student in Computer Science at the University of Illinois at Urbana Champaign.</p>
+			</div>
+
+		</section>
+
+		<section class="modalEmployee" id="modalEmployee4">
+			<div class="exitModal" id="exitModal4">X</div>
+			<div class="descriptionWrapper" id="descriptionWrapper4">
+				<p>Danish is a student in Computer Science at the University of Illinois at Urbana Champaign.</p>
+			</div>
+
+		</section>
+
+		<div id="subscribeAnchor"></div>
+		<section id="subscriptionForm">
+			
+			<div class="inSub" >
+				<div id="subTextWrapper">
+					<h1 id="subscriptHeading">Stay informed!</h1>
+					<h4> By subscribing, you will be the first to hear about future launches and company announcements. Feel free to also follow us on Twitter or LinkedIn.</h4>
+					<div id="iconWrapper">
+						<div class="icon" id="icon1">
+							<i class="fa fa-facebook-square"></i>
+						</div>
+
+						<div class="icon" id="icon2">
+							<i class="fa fa-twitter-square"></i>
+
+						</div>
+						<div class="icon" id="icon3">
+							<i class="fa fa-linkedin-square"></i>
+						</div>
+
+						<div class="icon" id="icon4">
+							<i class="fa fa-pinterest-square"></i>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="inSub" >
+					<div id="subFormWrapper">
+						<h1 id="subscribeText">Subscribe to our mailing list</h1>
+						<form>
+							First name:<br>
+							<input type="text" name="firstname" size="50">
+							<br>
+							Last name:<br>
+							<input type="text" name="lastname" size="50">
+							<br>
+							Email address:<br>
+							<input type="text" name="email" size="50">
+							<br>
+							Phone Number:<br>
+							<input type="text" name="number" size="50">	
+								
+						</form>	
+						<div class="btn">
+								Subscribe
+						</div>		
+					</div>
+			</div>
+
+		</section>
+
+		<div id="footerAnchor"></div>
+		<footer id="footer">
+			
+
+			<div class="inFooter" id="footer1">
+				<div id="linksWrapper" id="footer1">
+					<h1 class="linkText"><a href="#">Newsletter</a></h1>
+					<h1 class="linkText"><a href="#">Press</a></h1>
+				</div>
+			</div>
+			<div class="inFooter" id="footer2">
+				<div id="contactInfoWrapper" >
+					<h1 class="linkText"><a href="#">WikiMenu</a></h1>
+					<h1 class="linkText"><a href="#">Adress: 1010 W. Green St.</a></h1>
+					<h1 class="linkText"><a href="#">Phone: 1-312-204-5967</a></h1>
+					
+				</div>
+			</div>
+			<div class="inFooter" id="footer3">
+				<div id="contactFormWrapper">
+					
+						<h1 id="contactHeading">Contact</h1>
+						<form>
+							<input type="text" name="firstname" size="50" placeholder="name">
+							<br>
+							<input type="text" name="lastname" size="50" placeholder="phone number">
+							<br>
+							<input type="text" name="email" size="50" placeholder="email">
+							<br>
+							<input id="textBox"type="text" name="number" size="50" placeholder="Type your message...">	
+								
+						</form>	
+						<div class="btn2" id="contactButton">
+								Send Message
+						</div>		
+					
+					
+				</div>
+			</div>
+
+
+		</footer>
+		<section id="copyrightWrapper">
+			
+			<p id="copyrightText">Copyright © WikiMenu 2015. All Rights Reserved.</p>
+
+
+		</section>
+		<!-- <section id="sliderWrapper">
+			
+
+			<div class="slides">
+
+				<div id="slide1" class="slide">
+
+					<div class="slideText inslide">hello</div>
+					<div class="slideImage inslide"></div>
+
+				</div>
+
+				<div id="slide2" class="slide">
+
+					<div class="slideText inslide">hi</div>
+					<div class="slideImage"></div>
+
+				</div>
+
+				<div id="slide3" class="slide">
+
+					<div class="slideText inslide">hi</div>
+					<div class="slideImage inslide"></div>
+
+				</div>
+
+			</div>
+	
+
+		</section>
+
+		<section id="collumnView"> 
+
+			<div class="collumn collumn1"></div>
+			<div class="collumn collumn2"></div>
+			<div class="collumn collumn3"></div>
+
+		</section>
+
+		<section id="video">
+			<img id= "videoImage" src="images/dining.jpg">
+			<img id= "playButton" src="images/play.png">
+		</section>
+		
+		<div id="modal">
+			
+
+
+
+		</div> -->
   <script src="lib/jquery-2.1.3.min/index.js"></script>
   <script src="js/script.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
