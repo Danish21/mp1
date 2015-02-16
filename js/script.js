@@ -2,9 +2,9 @@ $(document).ready(function(){
 	
 	var headerHeight = $(window).height()-70;
 	var headerWidth  = $(window).width();
-	$("#dynamicText").css('top', ""+ (headerHeight/2)+"px" );
+	$("#dynamicText").css('top', ""+ (headerHeight/2)-100+"px" );
 	$("#dynamicText").css('left', ""+ (headerWidth/2)-160+"px" );
-	$("#searchBox").css('top', ""+ ((headerHeight/2)+50) +"px" );
+	$("#searchBox").css('top', ""+ (headerHeight/2)-50+"px" );
 	$("#searchBox").css('left', ""+ (headerWidth/2)-150+"px" );
 	//$("#playButton").css('left', ""+ (headerWidth/2)-75+"px" );
 
@@ -82,9 +82,9 @@ $(document).ready(function(){
 		headerHeight = $(window).height()-70;
 		headerWidth  = $(window).width();
 		$('header').css("height",""+ headerHeight + "px"  );
-		$("#dynamicText").css('top', ""+ (headerHeight/2)+"px" );
-		$("#dynamicText").css('left', ""+ (headerWidth/2)-160+"px" );
-		$("#searchBox").css('top', ""+ ((headerHeight/2)+50) +"px" );
+		$("#dynamicText").css('top', ""+ (headerHeight/2)-100+"px" );
+		$("#dynamicText").css('left', ""+ (headerWidth/2)-1800+"px" );
+		$("#searchBox").css('top', ""+ (headerHeight/2)-50+"px" );
 		$("#searchBox").css('left', ""+ (headerWidth/2)-150+"px" );
 		$('.slide').css('width', ""+headerWidth+"px");
 		updateSlideShowWidth();
@@ -149,9 +149,8 @@ $(document).ready(function(){
 		headerHeight = $(window).height()-70;
 		headerWidth  = $(window).width();
 		$("#modalEmployee1").css('top', ""+ (headerHeight/2)-100+"px" );
-		$("#modalEmployee1").css('left', ""+ (headerWidth/2)-200+"px" );
+		$("#modalEmployee1").css('left', ""+ (headerWidth/2)-90+"px" );
 		$("#modalEmployee1").css("visibility", "visible");
-
 		// $('body').addClass("opaque");
 		// $("#modalEmployee1").addClass("unOpaque");
 		console.log("hi");			
@@ -167,7 +166,7 @@ $(document).ready(function(){
 		headerHeight = $(window).height()-70;
 		headerWidth  = $(window).width();
 		$("#modalEmployee2").css('top', ""+ (headerHeight/2)-100+"px" );
-		$("#modalEmployee2").css('left', ""+ (headerWidth/2)-200+"px" );
+		$("#modalEmployee2").css('left', ""+ (headerWidth/2)-90+"px" );
 		$("#modalEmployee2").css("visibility", "visible");
 		console.log("hi");			
 
@@ -182,7 +181,7 @@ $(document).ready(function(){
 		headerHeight = $(window).height()-70;
 		headerWidth  = $(window).width();
 		$("#modalEmployee3").css('top', ""+ (headerHeight/2)-100+"px" );
-		$("#modalEmployee3").css('left', ""+ (headerWidth/2)-200+"px" );
+		$("#modalEmployee3").css('left', ""+ (headerWidth/2)-90+"px" );
 		$("#modalEmployee3").css("visibility", "visible");
 					
 
@@ -197,7 +196,7 @@ $(document).ready(function(){
 		headerHeight = $(window).height()-70;
 		headerWidth  = $(window).width();
 		$("#modalEmployee4").css('top', ""+ (headerHeight/2)-100+"px" );
-		$("#modalEmployee4").css('left', ""+ (headerWidth/2)-200+"px" );
+		$("#modalEmployee4").css('left', ""+ (headerWidth/2)-90+"px" );
 		$("#modalEmployee4").css("visibility", "visible");
 	
 				

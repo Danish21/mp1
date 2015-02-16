@@ -2,6 +2,8 @@
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 
 
+
+
 body{
 	margin: 0 0;
 	padding: 0 0;
@@ -14,7 +16,7 @@ nav{
 	position: fixed;
 	left: 0;
 	top: 0;
-	transition: $ease;
+	transition: all 0.5s;
 	z-index: 9999;
 }
 .sticky{
@@ -38,8 +40,9 @@ nav{
 	width: 100%;
 	margin-top: 25px;
 	height: 30px;
+	/*border: solid red;*/
 	font-size: 20px;
-	transition: $ease;
+	transition: all 0.5s;
 }
 .stickyOptions{
 	margin-top: 15px;
@@ -50,12 +53,13 @@ nav{
 	width: 19%;
 	margin: 0;
 	padding: 0;
-	transition: $ease;
+	transition: all 0.5s;
 }
 
 .navOptions li a{
 	color: white;
 	text-decoration: none;
+
 }
 
 .navOptions li a:hover{
@@ -66,7 +70,7 @@ nav{
 
 	width: 70px;
 	height: 55px;
-	transition: $ease;
+	transition: all 0.5s;
 
 }
 .stickyLogo{
@@ -74,35 +78,15 @@ nav{
 	height: 35px;
 }
 header{
-	// position: relative;
+	position: relative;
 	margin-top: 70px;
 	width: 100%;
 	height: 90vh;
 	background: url("../images/wood.jpg");
-	background-attachment:fixed;
+	background-attachment: fixed;
 	background-position: center center;
 	background-size: cover;
-	opacity: 0;
-	@include animation(fadein,2s,forwards);
-}
-@keyframes fadein {
-    0%   {opacity: 0.25;}
-    25%  {opacity: 0.5;}
-    75%  {opacity: 0.75;}
-    100% {opacity: 1;}
-}
-@-webkit-keyframes fadein {
-    0%   {opacity: 0.25;}
-    25%  {opacity: 0.5;}
-    75%  {opacity: 0.75;}
-    100% {opacity: 1;}
-}
-
-@-moz-keyframes fadein {
-    0%   {opacity: 0.25;}
-    25%  {opacity: 0.5;}
-    75%  {opacity: 0.75;}
-    100% {opacity: 1;}
+	// border: solid red;
 }
 
 #dynamicText{
@@ -115,10 +99,7 @@ header{
 	position: absolute;
 	top: 50px;
 	left: 50px;
-	height: 50px;
-	width: 400px;
 }
-
 
 #Mission{
 	width: 100%;
@@ -129,11 +110,11 @@ header{
 	color: rgb(46, 59, 78);
 	text-align: center;
 	position: relative;
-	font-size: 30px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
+	font-size: 28px;
+	line-height: 32px;
+	font-weight: 300;
 	margin-top: 50px;
-	font-family: $subHeadingFont;
+	font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
 .collumn {
@@ -145,30 +126,29 @@ header{
 }
 
 .missionSubtitle {
-	font-size: 19px;
-	color: rgb(46, 59, 78);
-	text-align: center;
-	font-family: $smallTextFont;
+font-size: 19px;
+color: rgb(46, 59, 78);
+text-align: center;
 }
 
 .imageWrapper {
-	width: 100px;
-	height: 220px;
-	margin: 20px auto 0px;
-	position: relative;
+width: 100px;
+height: 220px;
+margin: 20px auto 0px;
+position: relative;
 }
 .imageWrapper img {
-	position: absolute;
-	top: 0px;
-	left: 0px;
+position: absolute;
+top: 0px;
+left: 0px;
 }
 
 .imageWrapper #iphoneLogo {
-	position: absolute;
-	top: 80px;
-	left: 30px;
-	width: 40px;
-	height: 30px;
+position: absolute;
+top: 80px;
+left: 30px;
+width: 40px;
+height: 30px;
 }
 
 #imageWrapper2 {
@@ -187,17 +167,23 @@ header{
 }
 
 #imageWrapper3 h4 {
-	position: absolute;
-	top: 60px;
-	left: 10px;
-	font-size: 8px;
+position: absolute;
+top: 60px;
+left: 10px;
+font-size: 8px;
 }
 
 /*Business*/
 #Businesses {
 	height: 450px;
 	width: 100%;
-	position: relative;	
+	position: relative;
+	border: solid black;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
 }
 
 #bHeading {
@@ -205,16 +191,23 @@ header{
 	text-align: center;
 	position: relative;
 	font-size: 28px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
-	margin-top: 20px;
-	font-family: $headingFont;
+	line-height: 32px;
+	font-weight: 300;
+	margin-top: 50px;
+	font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
+#bSubHeading {
+	font-size: 19px;
+	color: rgb(46, 59, 78);
+	text-align: center;
+	margin-top: 20px; 
+	margin-bottom: 20px;
+}
 
 #carasol {
 	position: relative;
-	height: 400px;
+	height: 300px;
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
@@ -225,96 +218,37 @@ header{
 	position: relative;
 	width: 100%;
 	float: left;
-	height: 400px;
+	height: 300px;
 	margin: 0px;
 	padding: 0px;
 }
 #slide1 {
-	// background-color: red;
+	background-color: red;
 }
 
 #slide2 {
-	// background-color: orange;
+	background-color: orange;
 }
 
 #slide3 {
-	// background-color: black;
-}
-
-.slide h1{
-	text-align: center;
-	color: rgb(46, 59, 78);
-	text-align: center;
-	position: relative;
-	font-size: 22px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
-	margin-top: 20px;
-	font-family: $subHeadingFont;
-}
-
-.slide .slidePicWrapper{
-	position: relative;
-	margin: 0 auto 0 auto;
-	margin-top: 20px;
-	height: 300px;
-	width: 500px;
-	background-color: grey;
-	@include border-radius(25px);
-
-}
-
-#slidePicWrapper3{
 	background-color: black;
 }
-
-.ipadImage{
-	height: 100%;
-	width: 100%;;
-}
-.ipadInfo{
-	position: absolute;
-	top: 15px;
-	left: 55px;
-	width:393px;
-	height: 264px;
-	// border: solid blue;
-	z-index: 30;
-}
-#ipadLogo{
-	width: 70px;
-	height: 50px;
-	position: absolute;
-	left: 150px;
-	top: 30px;
-
-}
-#bussinessLogin{
-	position: absolute;
-	left: 70px;
-	top: 90px;
-}
-#interactImage{
-	width:  100%;
-	height: 100%;
-}
-
-#bizVideo{
-	width:  100%;
-	height: 100%;
-}
 .leftArrowBox{
+
 	position: absolute;
-	top: 175px;
+	top: 120px;
 	left: 10px;
 	font-size: 30px;
+	// left: 150px;
+	border: solid blue;
+
 }
 .rightArrowBox{
 	position: absolute;
-	top: 175px;
+	top: 120px;
 	right: 10px;
 	font-size: 30px;
-	// border: solid blue;
+	border: solid blue;
 }
 .fa:hover{
 	// width:100px;
@@ -330,21 +264,21 @@ header{
 	text-align: center;
 	position: relative;
 	font-size: 28px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
+	line-height: 32px;
+	font-weight: 300;
 	margin-top: 50px;
-	font-family: $headingFont;
+	font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
 #teamSubTitle {
 	color: rgb(46, 59, 78);
 	text-align: center;
 	position: relative;
-	font-size: 19px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
+	font-size: 16px;
+	line-height: 32px;
+	font-weight: 300;
 	margin-top: 5px;
-	font-family: $subHeadingFont;
+	font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
 .teamCollumn {
@@ -357,69 +291,61 @@ header{
 	margin: 14px auto 0px;
 	height: 210px;
 	width: 50%;
-	@include border-radius(25px);
+	border-radius: 25px;
 }
 .employeeName {
 	color: rgb(46, 59, 78);
 	text-align: center;
 	position: relative;
 	font-size: 20px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
+	line-height: 32px;
+	font-weight: 300;
 	margin-top: 5px;
-	font-family: $smallTextFont;
+	font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
 .employeePictureWrapper {
 	margin: 10px auto 0px;
 	height: 150px;
 	width: 150px;
-	@include border-radius(50%);
+	border-radius: 50%;
 }
 
 .employeePicture {
 	width: 100%;
 	height: 100%;
-	@include border-radius(50%);
-	// border: solid red;
+	border-radius: 50%;
+	border: solid red;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
 }
-.employeePicture:hover{
-	@include animation(spin,1s,"");
-
-}
-
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-
 
 .modalEmployee {
 	position: fixed;
 	top: 200px;
-	left: 0px;
-	height: 150px;
-	width: 400px;
+	left: 400px;
+	height: 200px;
+	width: 200px;
 	z-index: 9997;
+	background-color: grey;
 	visibility: hidden;
-	@include border-radius(40px);
-	background-color: #000000;
-	color: white;
 }
 .exitModal {
 	position: absolute;
 	top: 5px;
-	left: 350px;
-	z-index: 3;
+	left: 180px;
 }
 
 .descriptionWrapper {
 	position: absolute;
 	height: 150px;
-	width: 340px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	
+	width: 190px;
+	padding-left: 10px;
+	padding-right: 10px;
+	top: 20px;
 }
 
 #subscriptionForm {
@@ -431,7 +357,7 @@ header{
 
 .inSub {
 	position: relative;
-	color: $smoothGrey;
+	color: rgb(68, 68, 68);
 	float: left;
 	width: 49%;
 	height: 400px;
@@ -449,7 +375,7 @@ header{
 	color: rgb(64, 64, 64);
 	font-size: 16px;
 	line-height: 1.75em;
-	font-family: $textFont;
+	font-family: 'Open Sans';
 	margin-bottom: 15px;
 }
 
@@ -477,10 +403,10 @@ header{
 #subTextWrapper {
 	height: 300px;
 	width: 400px;
-	color: $smoothGrey;
+	color: rgb(68, 68, 68);
 	font-size: 16px;
 	line-height: 1.75em;
-	font-family: $textFont;
+	font-family: 'Open Sans';
 	position: absolute;
 	top: 30px;
 	left: 30px;
@@ -490,11 +416,7 @@ header{
 	color: black;
 	font-size: 36px;
 	line-height: 1.75em;
-	font-family: $headingFont;
-}
-
-h4 {
-	font-family: $smallTextFont;
+	font-family: 'Open Sans';
 }
 
 #iconWrapper {
@@ -502,16 +424,10 @@ h4 {
 	width: 300px;
 	height: 100px;
 }
-
-#subFormWrapper h1 {
-	font-family: $subHeadingFont;
-	font-size: 19px;
-}
 #subFormWrapper input {
 	height: 20px;
 	width: 300px;
 	margin-bottom: 10px;
-	font-family: $smallTextFont;
 }
 .icon {
 	width: 24%;
@@ -537,7 +453,11 @@ footer {
 	height: 400px;
 	background-color: rgb(64, 64, 73);
 	position: relative;
-	border-color: solid blue;
+	border-color: solid red;
+}
+
+#footer1 {
+	width: 20%;
 }
 
 .inFooter {
@@ -545,6 +465,11 @@ footer {
 	float: left;
 	height: 100%;
 	/*border: solid red;*/
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
 }
 
 #linksWrapper {
@@ -553,86 +478,82 @@ footer {
 	width: 100px;
 	top: 50px;
 	left: 50px;
+	border: solid blue;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
 }
 
 #footer2 {
-	width: 50%;
+	width: 30%;
 }
 
-#footer2 h1 {
-	font-family: $headingFont;
-	font-size: 15px;
-}
-
-#footer2 h2 {
-	font-family: $textFont;
-	text-decoration: none;
-}
 
 #footer3 {
-	width: 45%;
+	width: 47%;
 }
 
 .linkText {
-	font-size: 15px;
+	color: black;
+	font-size: 20px;
 	line-height: 1.75em;
-	font-family: $textFont;
-	text-align: center;
+	font-family: 'Open Sans';
 }
-
 .linkText a {
-	color: white;
-	font-weight: 500;
+	color: black;
 }
-
 a {
 	text-decoration: none;
 }
 
 #contactInfoWrapper {
-	position: relative;
-	height: 150px;
+	position: absolute;
+	height: 100px;
 	width: 250px;
-	margin: 0 auto 0 auto;
-	margin-top: 130px;
+	top: 50px;
+	left: 20px;
+	border: solid blue;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
 }
 
 #contactFormWrapper {
-	// position: absolute;
-	position: relative;
-	margin: 0 auto 0 auto;
-	margin-top: 50px;
+	position: absolute;
 	height: 300px;
-	width: 320px;
+	width: 270px;
+	top: 50px;
+	left: 20px;
+	border: solid blue;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
 }
 
 #contactHeading {
 	color: white;
 	font-size: 20px;
 	line-height: 1.75em;
-	font-family: $headingFont;
+	font-family: 'Open Sans';
 }
 
-.form{
-	background-color: $lightGrey;
+#contactFormWrapper input {
+	background-color: rgb(83, 83, 91);
 	border: none;
-	height: 30px;
+	/*height: 20px;*/
 	margin-top: 5px;
 	
 }
 
 #textBox {
-	background-color: $lightGrey;
 	width: 300px;
 	height: 100px;
-	margin-top: 5px;
-	border: none;
-}
-
-input[type="text"]
-{
-    font-size:10px;
-    font-family: "Century Gothic"
 }
 
 .btn2 {
@@ -644,20 +565,18 @@ input[type="text"]
 	text-decoration: none;
 	width: 100px;
 	margin-top: 10px;
-
 }
 
 #copyrightWrapper {
-	// margin-top: -30px;
+	margin: 0;
 	width: 100%;
 	height: 50px;
-	background-color: $lightGrey;
+	background-color: rgb(83, 83, 91);
 	color: black;
 }
 
 #copyrightText {
-	
+	margin: -10px;
 	font-size: 10px;
 	margin-left: 50px;
-	margin-top: 30px;
 }
