@@ -1,13 +1,15 @@
 $(document).ready(function(){
-	
+	/*DYnmaically vertically centering searchBox and header text*/
 	var headerHeight = $(window).height()-70;
 	var headerWidth  = $(window).width();
 	$("#dynamicText").css('top', ""+ (headerHeight/2)+"px" );
 	$("#dynamicText").css('left', ""+ (headerWidth/2)-160+"px" );
 	$("#searchBox").css('top', ""+ ((headerHeight/2)+50) +"px" );
 	$("#searchBox").css('left', ""+ (headerWidth/2)-150+"px" );
-	//$("#playButton").css('left', ""+ (headerWidth/2)-75+"px" );
+	
 
+
+	/*dynamic header text code*/
     var myString = "Where are you dining today?";
 
 	var myArray = myString.split("");
@@ -32,6 +34,7 @@ $(document).ready(function(){
 	var index = 1;
 	var myString2 = "Worst Pizza Ever, Wil never ever eat this for the rest of my life";
     
+    /*dynamic iphone text code*/
 	var myArray2 = myString2.split("");
 	var loopTimer2;
 	var y;
@@ -63,7 +66,7 @@ $(document).ready(function(){
 
 	
 
-	//sticky navbar
+	//sticky navbar code
 	$(window).scroll(function() {
 	if ($(this).scrollTop() > 50){  
 	    $('nav').addClass("sticky");
@@ -92,59 +95,9 @@ $(document).ready(function(){
 	});
 
 
-	//Smooth Scrolling
+	
 
-	// $('#menu1').on('click',function (e) {
-	//     e.preventDefault();
-
-	//     var target = this.hash;
-	//     var $target = $(target);
-
-	//     $('html, body').stop().animate({
-	//         'scrollTop': $target.offset().top
-	//     }, 2000, 'swing', function () {
-	//         window.location.hash = target;
-	//     });
-	// });
-
-	///slideBox
-
-
-	// var width= $(window).width();
-	// var animationSpeed=1000;
-	// var pause= 3000;
-	// var currentSlide= 1;
-
-	// var $slider =$("#sliderWrapper");
-	// var $slideContainer = $slider.find(".slides");
-	// var $slides = $slideContainer.find(".slide");
-
-	// var interval;
-
-	// function startSlider(){
-
-	// 	interval = setInterval(function(){
-	// 		var width= $(window).width();
-	// 		$slideContainer.animate({"margin-left": "-=" + 500},animationSpeed, function(){
-				
-	// 			currentSlide++;
-
-	// 			if(currentSlide == $slides.length){
-	// 				currentSlide=1;
-	// 				$slideContainer.css("margin-left", 0); // does it behind the scenes
-	// 			}
-	// 		});
-	// 	},pause);
-
-	// }
-
-	// function stopSlider(){
-	// 	clearInterval(interval);
-	// }
-
-	// startSlider();
-
-	//modal
+	//modal code
 	$("#employee1").click(function(){
 		headerHeight = $(window).height()-70;
 		headerWidth  = $(window).width();
@@ -152,16 +105,9 @@ $(document).ready(function(){
 		$("#modalEmployee1").css('left', ""+ (headerWidth/2)-200+"px" );
 		$("#modalEmployee1").css("visibility", "visible");
 
-		// $('body').addClass("opaque");
-		// $("#modalEmployee1").addClass("unOpaque");
-		console.log("hi");			
-
 	});
 	$("#exitModal1").click(function(){
-
-		$("#modalEmployee1").css("visibility", "hidden");
-		console.log("hi");			
-
+		$("#modalEmployee1").css("visibility", "hidden");				
 	});
 	$("#employee2").click(function(){ 
 		headerHeight = $(window).height()-70;
@@ -173,11 +119,9 @@ $(document).ready(function(){
 
 	});
 	$("#exitModal2").click(function(){
-
-		$("#modalEmployee2").css("visibility", "hidden");
-					
-
+		$("#modalEmployee2").css("visibility", "hidden");				
 	});
+
 	$("#employee3").click(function(){
 		headerHeight = $(window).height()-70;
 		headerWidth  = $(window).width();
@@ -191,16 +135,15 @@ $(document).ready(function(){
 		
 		$("#modalEmployee3").css("visibility", "hidden");
 					
-
 	});
+
 	$("#employee4").click(function(){
 		headerHeight = $(window).height()-70;
 		headerWidth  = $(window).width();
 		$("#modalEmployee4").css('top', ""+ (headerHeight/2)-100+"px" );
 		$("#modalEmployee4").css('left', ""+ (headerWidth/2)-200+"px" );
 		$("#modalEmployee4").css("visibility", "visible");
-	
-				
+			
 
 	});
 	$("#exitModal4").click(function(){
@@ -208,7 +151,7 @@ $(document).ready(function(){
 				
 	});
 
-	/*"#navBar highlighting stuff"*/
+	/*"#navBar scrolling code"*/
 
 	$('a[href*=#]').click(function(event){
 	    $('html, body').animate({
@@ -217,6 +160,8 @@ $(document).ready(function(){
 	    event.preventDefault();
 	});
 
+
+	/*navbar highlighting code*/
 	var aChildren =[]; // find the a children of the list items
     var aArray = []; // create the empty aArray
     for (var i=0; i < 5; i++) {    
@@ -251,13 +196,9 @@ $(document).ready(function(){
 
         for (var i=0; i < aArray.length; i++) {
             var theID = aArray[i];
-            console.log(theID);
             var divPos = $(theID).offset().top; // get the offset of the div from the top of page
             var divHeight = $(theID).height(); // get the height of the div in question
-            // console.log("divPos: " + divPos);
-            // console.log("windowPos: " + windowPos);
-            // console.log("windowHeight: " + windowHeight);
-            // console.log("id: "+aChildren[i]);
+            
             var j=0;
             if(i==4){
             	j=200;
@@ -284,14 +225,14 @@ $(document).ready(function(){
     });
 	/*Nav Bar Highlighting stuff done*/
 
-	/*slideshow*/
+	/*Carousol code*/
 	var currentPosition = 0; 
 
 	
 	$('.slide').css('width', ""+headerWidth+"px");
 	var slides = $('.slide');
 	var numberOfSlides = slides.length;
-	console.log("numberOfSlides: "+ numberOfSlides);
+	
 	slides.wrapAll('<div id="slidesHolder"></div>')
 	slides.css({ 'float' : 'left' });
 	$('#slidesHolder').css('width', headerWidth * numberOfSlides);
@@ -319,7 +260,6 @@ $(document).ready(function(){
 				  .animate({'marginLeft' : headerWidth*(-currentPosition)});
 	}
 
-	// var slideMover = setInterval(changePosition,5000);
 
 	
 
@@ -329,7 +269,6 @@ $(document).ready(function(){
 	function updateSlideShowWidth(){
 		$('.slide').css('width', ""+headerWidth+"px");
 		$('#slidesHolder').css('width', headerWidth * numberOfSlides);
-		console.log("hello32");
 
 	}
 });
